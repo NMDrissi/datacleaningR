@@ -32,6 +32,9 @@ names(merged_data)[1:2] <- c("subject", "activity")
 merged_data%>%
   group_by(subject, activity)%>%
   summarize_each(funs(mean))
+  
+#export to csv
+write.csv(head,"head2")
 
 #head(tidy_mean)
 }
