@@ -33,8 +33,8 @@ merged_data%>%
   group_by(subject, activity)%>%
   summarize_each(funs(mean))
   
-#export to csv
-write.csv(head,"head2")
+#write to txt
+write.table(head,"head2", row.names = FALSE)
 
-#head(tidy_mean)
+
 }
